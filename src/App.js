@@ -6,6 +6,7 @@ import Header from './header'
 import Nav from './nav'
 import Home from './home'
 import Payment from './payment'
+import Thankyou from './thankyou'
 class App extends Component {
   render() {
     return (
@@ -13,7 +14,7 @@ class App extends Component {
         <Header/>
         <Nav/>
    
-        <Payment/>
+        <Thankyou/>
         <div id="outerBottom" >
           <div  id="innerBottom"></div>
         </div>

@@ -12,38 +12,38 @@ export default ()=>{
 			<Row style={{margin:'100px auto', color:'grey'}}>
 				<Col xs={12} sm={12} md="6">
 					<Jumbotron style={{background:'none'}}>
-						<h2 style={{paddingLeft:'15px',fontWeight:'bold'}}>Your Cart</h2>
+						<h3 style={{paddingLeft:'15px',fontWeight:'bold'}}>Your Cart</h3>
 						<hr style={{backgroundColor:'grey',height:'2px'}} />
-						<Col xsOffset={1}>
+						<Col xsOffset={1} >
 							<p style={{fontWeight:'bold'}}>TriLens</p>
 							<Image src={Box} responsive />
 							<Form horizontal>
 								<FormGroup bsSize="small">
-									<Col componentClass={ControlLabel} xs="2"  style={{fontWeight:'normal'}}>
-										Quantity:
+									<Col  xs="2" md="4">
+										<span style={{fontWeight:'normal',verticalAlign:'middle'}}>Quantity:</span>
 									</Col>
-									<Col xs="4"  >
+									<Col xs="4" md="4" >
 										<FormControl type="text" style={{textAlign:"center"}} />
-									</Col>				
+									</Col>		
 								</FormGroup>
+								<Row >
+									<Col xs="2" md="4" style={{fontWeight:'normal'}}>
+										Price:
+									</Col>
+									<Col xs="8"  >
+										99 &euro; + Shipping
+									</Col>							
+								</Row>
 							</Form>
-							<Row>
-								<Col xs="2"  >
-									<ControlLabel style={{fontWeight:'normal'}}>Price:</ControlLabel>
-								</Col>
-								<Col xs="10"  >
-									<span>99 &euro; + Shipping</span>
-								</Col>
-							</Row>
 						</Col>
 					</Jumbotron>
 				</Col>
 				<Col xs={12} sm={12} md="6">
 					<Jumbotron style={{background:'none',}}>
-						<h2 style={{paddingLeft:'15px',fontWeight:'bold'}}>Payment Options</h2>
+						<h3 style={{paddingLeft:'15px',fontWeight:'bold'}}>Payment Options</h3>
 						<hr style={{backgroundColor:'grey',height:'2px'}} />
 						<p style={{fontWeight:'bold'}}>
-							<i class="fa fa-credit-card" style={{color:"#ff4169"}}></i>{' '}
+							<i class="fa fa-credit-card" style={{color:"#ff4169",paddingRight:'20px'}}></i>
 							<span >Credit Card</span>
 						</p>
 						<Col xsOffset={1}>
@@ -80,12 +80,18 @@ export default ()=>{
 											style={{textAlign:"center", width:"100px"}} />
 										</Col>
 									</Row>
-								</FormGroup>
+								</FormGroup><br/>
 								<Col mdOffset="2">
 									<Button style={buyNowButton}>Buy now</Button>
 								</Col>
 							</Form>
-						</Col>
+						</Col><br/><br/>
+						<p style={{fontWeight:'bold'}}>
+							<i class="fa fa-paypal" style={{color:"#ff4169",paddingRight:'20px'}}></i>
+							<span style={{textDecoration:'underline',textDecorationColor:'#8FCADB'}}>
+								<a href="" style={{color:'#8FCADB'}}>Pay with PayPal</a>
+							</span>
+						</p>
 					</Jumbotron>
 				</Col>
 			</Row>

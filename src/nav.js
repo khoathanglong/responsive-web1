@@ -3,7 +3,7 @@ import {Navbar,Nav, Image,NavItem} from 'react-bootstrap'
 import Logo from "./Logo-Header.png"
 import BuzzerLogo from './globuzzer.png'
 const spanStyle={verticalAlign:"middle", fontSize:'24px',color:'#fff'}
-const navItemStyle={color:"#fff", fontSize:'24px'}
+const navItemStyle={color:"#fff", fontSize:'16px'}
 export default ()=>{
   return (
      <Navbar fixedTop collapseOnSelect fluid  style={{border: "0",boxShadow: 'none'}}>
