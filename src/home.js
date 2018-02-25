@@ -1,6 +1,7 @@
 import React from "react"
 import {Grid, Col, Row, Image, Button,Jumbotron} from 'react-bootstrap'
 import Box from './Box.jpg'
+import {Link } from 'react-router-dom'
 export const buyNow={
 	background:'none',
 	border:'solid #ff4169 5px',
@@ -18,7 +19,7 @@ const addToCart={
 	padding:'15px 40px'
 }
 const title= {color:'#ff4169',marginTop:"0", fontWeight:'bold'}
-export default ()=>{
+export default (props)=>{
 	return (
 		<div style={{marginBottom:'70px', marginTop:'100px'}}>
 			<div id="videoTitle" style={{color:'white'}}>Lorem ipsum dolor. Sit amet.</div>
@@ -42,7 +43,7 @@ export default ()=>{
 								<p>
 								    Complete set including Housing. Belt clip, 5 x sets of cap magnets, 
 								    3 x Protective caps and a Frii Designs pouch. Available for Cannon
-								    EF, Nikon F or Sony E/FE lenses. Important fees may apply outside of the EU
+								    EF, Nikon F or Sony E/FE lenses. Import fees may apply outside of the EU
 								</p>
 								<br/>
 								<p style={{fontWeight:'Bold', fontSize:'24px'}}>
@@ -52,10 +53,12 @@ export default ()=>{
 								<p style={{margin:'0 auto'}}>
 								<br/>
 								<Col sm={4} smOffset={1} xs={6}>
-									<Button bsSize="large" 
-										style={buyNow}>
-										Buy now
-									</Button>
+									<Link to='/payment'> 
+										<Button bsSize="large" onClick={props.handleSingle}
+											style={buyNow}>
+											Buy now
+										</Button>
+									</Link>
 								</Col>
 								<Col sm={2} smOffset={2} xs={6}>
 									<Button bsSize="large" 
@@ -82,7 +85,7 @@ export default ()=>{
 								<p>
 								    Two complete set including Housing. Belt clip, 5 x sets of cap magnets, 
 								    3 x Protective caps and a Frii Designs pouch. Available for Cannon
-								    EF, Nikon F or Sony E/FE lenses. Important fees may apply outside of the EU
+								    EF, Nikon F or Sony E/FE lenses. Import fees may apply outside of the EU
 								</p>
 								<br/>
 								<p style={{fontWeight:'Bold', fontSize:'24px'}}>
@@ -92,10 +95,12 @@ export default ()=>{
 								<p style={{margin:'0 auto'}}>
 								<br/>
 								<Col sm={4} smOffset={1} xs={6}>
-									<Button bsSize="large" 
-										style={buyNow}>
-										Buy now
-									</Button>
+									<Link to="/payment">
+										<Button bsSize="large" onClick={props.handleDouble}
+											style={buyNow}>
+											Buy now
+										</Button>
+									</Link>	
 								</Col>
 								<Col sm={2} smOffset={2} xs={6}>
 									<Button bsSize="large" 

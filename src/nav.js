@@ -2,19 +2,23 @@ import React from 'react'
 import {Navbar,Nav, Image,NavItem} from 'react-bootstrap'
 import Logo from "./Logo-Header.png"
 import BuzzerLogo from './globuzzer.png'
+import {Link} from 'react-router-dom'//link to redirect endpoint
+
 const spanStyle={verticalAlign:"middle", fontSize:'24px',color:'#fff'}
 const navItemStyle={color:"#fff", fontSize:'16px'}
 export default ()=>{
   return (
      <Navbar fixedTop collapseOnSelect fluid  style={{border: "0",boxShadow: 'none'}}>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <NavItem eventKey={0}>
+            <Navbar.Header >
+              <Navbar.Brand >
+                <span>
+                 <Link to={`/`} style={{textDecoration:'none'}}>  
                   <Image src={Logo} circle style={{background:"black", marginRight:'32px'}} width="32px"/>
                   <span style={spanStyle}>GLB</span>
-                      {<Image src={BuzzerLogo} width="24px"/>}
+                    <Image src={BuzzerLogo} width="24px"/>
                   <span style={spanStyle}>BUZZER</span>
-                </NavItem>
+                 </Link>
+                </span>
             </Navbar.Brand>
             <Navbar.Toggle />
             </Navbar.Header>

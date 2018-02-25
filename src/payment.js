@@ -6,7 +6,7 @@ const buyNowButton={
 	...buyNow,
 	border:'solid #ff4169 3px',
 }
-export default ()=>{
+export default (props)=>{
 	return (
 		<Grid >
 			<Row style={{margin:'100px auto', color:'grey'}}>
@@ -17,13 +17,17 @@ export default ()=>{
 						<Col xsOffset={1} >
 							<p style={{fontWeight:'bold'}}>TriLens</p>
 							<Image src={Box} responsive />
-							<Form horizontal>
+							<Form horizontal onSubmit={(e)=>{e.preventDefault()}} >
 								<FormGroup bsSize="small">
 									<Col  xs="2" md="4">
 										<span style={{fontWeight:'normal',verticalAlign:'middle'}}>Quantity:</span>
 									</Col>
 									<Col xs="4" md="4" >
-										<FormControl type="text" style={{textAlign:"center"}} />
+										<FormControl 
+										onChange={props.handleChange}
+										defaultValue={props.quantity}
+										type="text" 
+										style={{textAlign:"center",fontWeight:'normal'}}  />
 									</Col>		
 								</FormGroup>
 								<Row >
@@ -31,7 +35,10 @@ export default ()=>{
 										Price:
 									</Col>
 									<Col xs="8"  >
-										99 &euro; + Shipping
+										{props.quantity%2===1?
+											(props.quantity-1)/2*179+99:
+											props.quantity/2*179 } 
+										{' '}&euro; + Shipping
 									</Col>							
 								</Row>
 							</Form>
