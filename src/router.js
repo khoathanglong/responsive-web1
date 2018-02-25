@@ -6,13 +6,13 @@ import Thankyou from './thankyou'
 export default ({handleSingle,handleDouble,quantity,handleChange}) =>{
 	return(
 		<Switch>
-			<Route exact path='/' render={(props)=>(<Home {...props} 
+			<Route exact path={`${process.env.PUBLIC_URL}/`} render={(props)=>(<Home {...props} 
 											handleSingle={handleSingle}
 											handleDouble={handleDouble} />)} />
-			<Route path='/payment' render={(props)=>(<Payment {...props}
+			<Route path={`${process.env.PUBLIC_URL}/payment`} render={(props)=>(<Payment {...props}
 											quantity={quantity}
 											handleChange={handleChange} />)} />
-			<Route path='/thankyou' component={Thankyou} />
+			<Route path={`${process.env.PUBLIC_URL}/thankyou`} component={Thankyou} />
 		</Switch>
 	)
 }
