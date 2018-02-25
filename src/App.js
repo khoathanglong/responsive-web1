@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import Background from './style/background.js'
+import Footer from './footer'
 import './App.css';
 import Header from './header'
 import Nav from './nav'
@@ -36,9 +35,7 @@ class App extends Component {
           quantity={this.state.quantity}
           handleChange={this.handleChange}
         />
-        <div id="outerBottom" >
-          <div  id="innerBottom"></div>
-        </div>
+        <Footer/>
       </div>
     );
   }

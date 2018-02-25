@@ -21,7 +21,7 @@ const addToCart={
 const title= {color:'#ff4169',marginTop:"0", fontWeight:'bold'}
 export default (props)=>{
 	return (
-		<div style={{marginBottom:'70px', marginTop:'100px'}}>
+		<div style={{marginBottom:'70px',marginTop:'50px'}}>
 			<div id="videoTitle" style={{color:'white'}}>Lorem ipsum dolor. Sit amet.</div>
 			<div style={{ textAlign: 'center', marginTop:"-40px"}} >
 				<iframe width="420" height="370" style={{position:'relative'}}
@@ -53,7 +53,7 @@ export default (props)=>{
 								<p style={{margin:'0 auto'}}>
 								<br/>
 								<Col sm={4} smOffset={1} xs={6}>
-									<Link to='/payment'> 
+									<Link to={`${process.env.PUBLIC_URL}/payment`}> 
 										<Button bsSize="large" onClick={props.handleSingle}
 											style={buyNow}>
 											Buy now
@@ -95,7 +95,7 @@ export default (props)=>{
 								<p style={{margin:'0 auto'}}>
 								<br/>
 								<Col sm={4} smOffset={1} xs={6}>
-									<Link to="/payment">
+									<Link to={`${process.env.PUBLIC_URL}/payment`}>
 										<Button bsSize="large" onClick={props.handleDouble}
 											style={buyNow}>
 											Buy now

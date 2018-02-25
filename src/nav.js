@@ -12,7 +12,7 @@ export default ()=>{
             <Navbar.Header >
               <Navbar.Brand >
                 <span>
-                 <Link to={`/`} style={{textDecoration:'none'}}>  
+                 <Link to={`${process.env.PUBLIC_URL}/`} style={{textDecoration:'none'}}>  
                   <Image src={Logo} circle style={{background:"black", marginRight:'32px'}} width="32px"/>
                   <span style={spanStyle}>GLB</span>
                     <Image src={BuzzerLogo} width="24px"/>
