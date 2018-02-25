@@ -9,7 +9,7 @@
   width:100%;
   background: #ff4169 ;
   padding:100px 0;
-  transform: skew(0deg,2deg); 
+  transform: skew(0deg,1deg); 
   margin-top:-100px;
   position: fixed;
   z-index: 1
@@ -24,11 +24,11 @@
 #outerBottom{
   position: fixed;
   bottom:0;
-  right:0;
-  left: 0;
-  height: 40px;
+  background-color:#ff4169 ;
+  height: 20px;
   width:100%;
-  transform: skew(0deg,2deg); 
+  border-top: solid #ff4169 1px;
+  transform: skew(0deg,1deg); 
   z-index: 1;
 }
 #innerBottom{
@@ -46,6 +46,9 @@ iframe{
   z-index: 3;
   text-align: center;
   top:30px;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 
+}
+.headerMarginTop{
+  margin-top: 50px;
 }

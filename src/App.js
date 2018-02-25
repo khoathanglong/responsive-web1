@@ -23,7 +23,23 @@ class App extends Component {
     if (quantity){this.setState({quantity:quantity})}
     else{alert('Please enter a number to get the price')}
   }
+  handleScroll(){
+    if(document.getElementById('video')){
+      if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+        document.getElementById('video').className=""
+      }else{
+        document.getElementById('video').className="headerMarginTop"
+      }
+    }
+  }
 
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  
+  componentWillUnMount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
   render() {
     return (
       <div className="App"> 

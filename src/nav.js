@@ -1,7 +1,7 @@
 import React from 'react'
 import {Navbar,Nav, Image,NavItem} from 'react-bootstrap'
-import Logo from "./Logo-Header.png"
-import BuzzerLogo from './globuzzer.png'
+import Logo from "./image/Logo-Header.png"
+import BuzzerLogo from './image/globuzzer.png'
 import {Link} from 'react-router-dom'//link to redirect endpoint
 
 const spanStyle={verticalAlign:"middle", fontSize:'24px',color:'#fff'}

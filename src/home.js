@@ -1,6 +1,6 @@
 import React from "react"
 import {Grid, Col, Row, Image, Button,Jumbotron} from 'react-bootstrap'
-import Box from './Box.jpg'
+import Box from './image/Box.jpg'
 import {Link } from 'react-router-dom'
 export const buyNow={
 	background:'none',
@@ -21,10 +21,10 @@ const addToCart={
 const title= {color:'#ff4169',marginTop:"0", fontWeight:'bold'}
 export default (props)=>{
 	return (
-		<div style={{marginBottom:'70px',marginTop:'50px'}}>
-			<div id="videoTitle" style={{color:'white'}}>Lorem ipsum dolor. Sit amet.</div>
-			<div style={{ textAlign: 'center', marginTop:"-40px"}} >
-				<iframe width="420" height="370" style={{position:'relative'}}
+		<div style={{marginBottom:'70px'}}>
+			<div id="video" style={{ textAlign: 'center'}} >
+				<div id="videoTitle" style={{color:'white'}}>Lorem ipsum dolor. Sit amet.</div>
+				<iframe title="intro" width="420" height="370" style={{position:'relative', top:'-30px'}}
 				src="https://www.youtube.com/embed/nye4eAjtwT0" 
 				frameborder="0" allow="autoplay; encrypted-media" 
 				allowfullscreen>

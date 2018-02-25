@@ -1,7 +1,8 @@
 import React from 'react'
 import {Grid, Col, Row, Jumbotron,Image, FormControl, FormGroup,ControlLabel,Form,Button} from 'react-bootstrap'
-import Box from './Box.jpg'
+import Box from './image/Box.jpg'
 import {buyNow} from './home'
+import {Link} from 'react-router-dom'
 const buyNowButton={
 	...buyNow,
 	border:'solid #ff4169 3px',
@@ -22,7 +23,7 @@ export default (props)=>{
 									<Col  xs="2" md="4">
 										<span style={{fontWeight:'normal',verticalAlign:'middle'}}>Quantity:</span>
 									</Col>
-									<Col xs="4" md="4" >
+									<Col xsOffset="1" mdOffset="0"  xs="4" md="4" >
 										<FormControl 
 										onChange={props.handleChange}
 										defaultValue={props.quantity}
@@ -34,7 +35,7 @@ export default (props)=>{
 									<Col xs="2" md="4" style={{fontWeight:'normal'}}>
 										Price:
 									</Col>
-									<Col xs="8"  >
+									<Col xsOffset="1" xs="8" mdOffset="0"  >
 										{props.quantity%2===1?
 											(props.quantity-1)/2*179+99:
 											props.quantity/2*179 } 
@@ -89,7 +90,10 @@ export default (props)=>{
 									</Row>
 								</FormGroup><br/>
 								<Col mdOffset="2">
-									<Button style={buyNowButton}>Buy now</Button>
+									<Link to={`${process.env.PUBLIC_URL}/thankyou`} >
+										<Button style={buyNowButton}>Buy now</Button>
+									</Link>
+									
 								</Col>
 							</Form>
 						</Col><br/><br/>

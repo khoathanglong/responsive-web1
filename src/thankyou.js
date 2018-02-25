@@ -1,6 +1,6 @@
 import React from 'react'
-import {Grid, Col, Row, Jumbotron,Image, FormControl, FormGroup,ControlLabel,Form,Button} from 'react-bootstrap'
-import LastLogo from './LastPage-Logo.png'
+import {Grid, Col, Row, Jumbotron,Image} from 'react-bootstrap'
+import LastLogo from './image/LastPage-Logo.png'
 
 export default ()=>{
 	return (
@@ -9,7 +9,7 @@ export default ()=>{
 				<Col xs={12} >
 					<Jumbotron style={{background:'none'}}>
 						<h3 style={{paddingLeft:'15px',fontWeight:'bold'}}>Thank you for your purchase!</h3>
-						<Col xs={6}>
+						<Col xs={12} sm={6}>
 							<hr style={{backgroundColor:'grey',height:'2px'}} />
 						</Col>
 						<Col xsOffset={2} xs={10}>
